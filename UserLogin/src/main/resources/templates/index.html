@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+  <meta charset="ISO-8859-1">
+    <title>Login page</title>
+  </head>
+  <body>
+  
+    <h1>Springboot with Thymleaf User Form - User input</h1>
+   
+    <form th:action="register" th:method="post" th:object="${userForm}">
+  
+      <lebel for="firstname"> First Name</lebel>
+      <input type="text" th:field="*{firstname}" ><br/>
+      
+      <lebel for="lastname"> Last Name</lebel>
+      <input type="text" th:field="*{lastname}"><br/>
+      
+      <lebel for="email">Email </lebel>
+      <input type="email" th:field="*{email}"><br/>
+      
+      <lebel for="password"> Password</lebel>
+      <input type="password" th:field="*{passwd}"><br/>
+      
+      <lebel for="dob">Birth Date </lebel>
+      <input type="date" th:field="*{dob}"><br/>
+      
+      <button type="submit">Submit</button>
+      
+    </form>
+    <br />
+    <h3 th:text="${message}">message</h3>
+  </body>
+</html>
